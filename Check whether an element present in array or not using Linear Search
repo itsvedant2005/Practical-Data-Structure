@@ -6,7 +6,6 @@ int main(){
     for(i=0;i<10;i++){
     scanf("%d",&a[i]);
     }
-
     printf("Enter the element you want to search?? ");
     scanf("%d",&num );
 
