@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(){
+    int a[100],i,n;
+    printf("Enter the size of array:");
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++){
+        printf("enter the array elements at position: %d ",i+1);
+        scanf("%d",&a[i]);
+    }
+
+    int pos;
+    printf("enter the position of element to which you want to delete:");
+    scanf("%d",&pos);
+ 
+    int j;
+    for(j=pos-1;j<n-1;j++){
+        a[j]=a[j+1];
+        
+    }
+    printf("New Array is\n");
+
+    for(j=0;j<n-1;j++){
+        printf("%d\n",a[j]);
+    }
+
+    return 0;
+}
