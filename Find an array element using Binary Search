@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main(){
+    int a[100],n;
+    
+    
+
+    printf("Enter the size of an array:\n");
+    scanf("%d",&n);
+    
+printf ("Enter the array elements is ascending order\n");
+    for (int i=0;i<n;i++){
+        printf("Enter the array number at position %d\t",i+1);
+        scanf("%d",&a[i]);
+    }
+    
+    int s;
+    int found=0;
+    printf("Enter the element which you want to search?? \n");
+    scanf("%d",&s);
+      
+    int high=n;
+    int low =0;
+    int mid =( low +high)/2;
+
+while(low<=high){
+
+    if(a[mid]==s){
+        printf("%d number is at %d position\n",s,mid+1);
+        found++;
+        break;
+    }
+    else if ( a[mid]> s){
+        high = mid-1;
+        mid = (high +low) /2;
+    }
+    else if(a[mid] < s ){
+        low = mid +1;
+        mid =(low +high )/2;
+    }
+}
+if(found == 0){
+    printf("Please Enter the vaid elements:\n");
+}
+return 0;
+}
